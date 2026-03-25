@@ -17,6 +17,8 @@
 - - [Environment](#environment)
 - - [File Format](#file-format)
 - - [Formatting Discipline](#formatting-discipline)
+- - [Declaration Discipline](#declaration-discipline)
+
 - - [Header Files](#header-files)
 - - [Include Discipline](#include-discipline)
 - - [Global Naming Discipline](#global-naming-discipline)
@@ -247,12 +249,12 @@ int &ptr;
 ~~~
 
 ### Pointers/References in Function Parameters
-Same as above.
+`&`, `*` are placed adjacent to the type.
 
 ~~~cpp
-void SetValue(int *ptr, int &ref){*ptr = ref;}
+void SetValue(int* ptr, int& ref){*ptr = ref;}
 
-void Swap(int *a, int *b) { int t = *a; *a = *b; *b = t; }
+void Swap(int* a, int* b) { int t = *a; *a = *b; *b = t; }
 ~~~
 
 ### Pointers/References in Function Return Values

@@ -19,6 +19,7 @@
 - - [环境](#环境)
 - - [文件格式](#文件格式)
 - - [格式纪律](#格式纪律)
+- - [声明纪律](#声明纪律)
 - - [头文件](#头文件)
 - - [包含纪律](#包含纪律)
 - - [全局命名纪律](#全局命名纪律)
@@ -257,12 +258,12 @@ int &ptr;
 
 
 ### 函数参数中的指针/引用
-同上
+`&` , `*`紧贴类型
 
 ~~~cpp
-void SetValue(int *ptr, int &ref){*ptr = ref;}
+void SetValue(int* ptr, int& ref){*ptr = ref;}
 
-void Swap(int *a, int *b) { int t = *a; *a = *b; *b = t; }
+void Swap(int* a, int* b) { int t = *a; *a = *b; *b = t; }
 ~~~
 
 ### 函数返回值中的指针/引用
